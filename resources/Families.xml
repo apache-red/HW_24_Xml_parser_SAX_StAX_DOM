@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Families xmlns="http://www.example.org/FamilySchema"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.example.org/FamilySchema FamilySchema.xsd">
+    <family adress="Belarus, Minsk, Engelsa №234">
+        <mother>
+            <maidenname>Ivanova</maidenname>
+            <name>Kate</name>
+            <surname>Petpova</surname>
+            <age>31</age>
+            <gender>female</gender>
+            <hobby>
+                <title>Dancing</title>
+                <times-per-week>2</times-per-week>
+                <schedule>
+                    <day>
+                        <day_name>monday</day_name>
+                        <time>18:00:00</time>
+                    </day>
+                    <day>
+                        <day_name>friday</day_name>
+                        <time>18:00:00</time>
+                    </day>
+                </schedule>
+            </hobby>
+        </mother>
+
+        <father>
+            <name>Igor</name>
+            <surname>Petpov</surname>
+            <age>32</age>
+            <gender>male</gender>
+        </father>
+
+        <children>
+
+            <child>
+                <name>Oleg</name>
+                <surname>Petpov</surname>
+                <age>5</age>
+                <gender>male</gender>
+            </child>
+
+            <child>
+                <name>Masha</name>
+                <surname>Petpova</surname>
+                <age>6</age>
+                <gender>female</gender>
+            </child>
+
+        </children>
+
+    </family>
+
+    <family adress="Belarus, Gomel, Kalinina №23">
+        <mother>
+            <maidenname>Sidorova</maidenname>
+            <name>Tanya</name>
+            <surname>Peshkina</surname>
+            <age>47</age>
+            <gender>female</gender>
+            <hobby>
+                <title>Cooking</title>
+                <times-per-week>2</times-per-week>
+                <schedule>
+                    <day>
+                        <day_name>wednesday</day_name>
+                        <time>19:30:00</time>
+                    </day>
+                    <day>
+                        <day_name>saturday</day_name>
+                        <time>11:00:00</time>
+                    </day>
+                </schedule>
+            </hobby>
+        </mother>
+
+        <father>
+            <name>Vasya</name>
+            <surname>Sidorov</surname>
+            <age>52</age>
+            <gender>male</gender>
+        </father>
+
+        <children>
+
+            <child>
+                <name>Nastya</name>
+                <surname>Sidorova</surname>
+                <age>17</age>
+                <gender>female</gender>
+            </child>
+
+        </children>
+
+
+    </family>
+
+
+</Families>
