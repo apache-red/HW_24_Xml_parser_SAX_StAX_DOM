@@ -32,12 +32,5 @@ public class DOM {
         }
     }
 
-    private void parseDocument(Document document) {
-
-        Element element = document.getDocumentElement();
-
-
-    }
-
 
 }
