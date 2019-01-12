@@ -1,38 +1,22 @@
 package com.redcompany.red.start.stax;
 
-import com.redcompany.red.entity.behavior.Hobby;
-import com.redcompany.red.entity.behavior.Schema;
-import com.redcompany.red.entity.person.Family;
-import com.redcompany.red.entity.person.FamilyMember;
-import com.redcompany.red.entity.person.Mother;
+
 import com.redcompany.red.entity.person.Society;
 
 import javax.xml.stream.XMLInputFactory;
-import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.InputStream;
+import java.io.FileReader;
+
 
 public class STAX {
 
 
+
     private static final String XML_FILE_PATH = "resources/Families.xml";
-
-    private static boolean nameFlag;
-    private static boolean ageFlag;
-    private static boolean languageFlag;
-//    private static boolean languageFlag;
-//    private static boolean languageFlag;
-
-
-    private Society society;
-    private Family family;
-    private FamilyMember familyMember;
-    private Hobby hobby;
-    private Schema schema;
+private Society society;
 
     public static void main(String[] arg) {
         STAX stax = new STAX();
@@ -41,17 +25,21 @@ public class STAX {
     }
 
     public void readXmlStax() {
-        InputStream input = null;
+
+        File file = new File(XML_FILE_PATH);
+        XMLInputFactory factory = XMLInputFactory.newInstance();
         try {
-            input = new FileInputStream(new File(XML_FILE_PATH));
-            XMLInputFactory inputFactory = XMLInputFactory.newInstance();
-            XMLStreamReader reader = inputFactory.createXMLStreamReader(input);
+            XMLStreamReader streamReader = factory.createXMLStreamReader(new FileReader(file));
             FamilyStaxHandler familyStaxHandler = new FamilyStaxHandler();
-            familyStaxHandler.parseDocument(reader);
-        } catch (FileNotFoundException | XMLStreamException e) {
+            society = familyStaxHandler.parseDocument(streamReader);
+           society.showSiciety();
+        } catch (XMLStreamException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
+
 
 
 }
